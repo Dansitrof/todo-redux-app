@@ -1,8 +1,8 @@
-<footer class="footer">
+<footer class="footer" style="font-size: 14px!important;">
     
   <span class="todo-count"><strong> {{ pendientes }} </strong>
-    <span *ngIf="pendientes ===1;else variasTareas" >Tarea pendiente.</span>
-    <ng-template #variasTareas> tareas pendientes.</ng-template>
+    <span *ngIf="pendientes ===1;else variasTareas" >Tarea pendiente     </span>
+    <ng-template #variasTareas>Tareas pendientes         </ng-template>
   </span>
 
     <ul class="filters">
@@ -13,8 +13,10 @@
         [class.selected]="filtro === filtroActual">
          {{ filtro |titlecase }} 
       </a>
+
       </li>
     </ul>
+    
 
     <button class="clear-completed"
             (click)="limpiarCompletados()">Limpiar completados</button>
